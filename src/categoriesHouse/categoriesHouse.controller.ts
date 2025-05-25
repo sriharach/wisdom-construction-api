@@ -61,7 +61,7 @@ export class CategoriesController {
   }
 
   @Get(':id')
-  findByOne(@Param('id') params: ModelCategoriesID) {
+  findByOne(@Param() params: ModelCategoriesID) {
     return this.categoriesHouseService.findByOne(params.id);
   }
 
