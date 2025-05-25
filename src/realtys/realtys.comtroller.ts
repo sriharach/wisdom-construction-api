@@ -46,7 +46,7 @@ export class RealtysController {
   }
 
   @Get(':id')
-  findByOne(@Param('id') params: ModelRealtysID) {
+  findByOne(@Param() params: ModelRealtysID) {
     return this.realtysService.findByOne(params.id);
   }
 

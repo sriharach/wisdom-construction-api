@@ -31,6 +31,7 @@ export class ModelHouseService {
         'realitys_id',
         'service_category_house_id',
         'name',
+        'main_img_house',
         'created_date',
         'code_house',
         'category_house.id',
@@ -49,7 +50,9 @@ export class ModelHouseService {
       select: {
         id: true,
         name: true,
+        code_house: true,
         created_date: true,
+        main_img_house: true,
         realty: {
           id: true,
           name: true,
