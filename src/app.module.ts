@@ -11,6 +11,7 @@ import { RealtysModule } from './realtys/realtys.module';
 import { CategoriesHouseModule } from './categoriesHouse/categoriesHouse.module';
 import { ModelHouseModule } from './modelHouse/modelHouse.module';
 import { UploadModule } from './upload/upload.module';
+import { DatabaseConfigAWSModule } from './database/config.module.aws';
 
 @Module({
   providers: [{ provide: APP_FILTER, useClass: GlobalExceptionFilter }],
@@ -45,7 +46,7 @@ import { UploadModule } from './upload/upload.module';
     //   }),
     //   inject: [ConfigService],
     // }),
-    DatabaseConfigModule,
+    DatabaseConfigAWSModule,
     AuthModule,
     UsersModule,
     RoleModule,
