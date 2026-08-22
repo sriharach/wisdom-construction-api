@@ -16,7 +16,7 @@ import { ConfigService } from '@nestjs/config';
 import { FileInterceptor } from '@nestjs/platform-express';
 import * as fs from 'fs';
 import * as path from 'path';
-import sharp = require('sharp');
+import sharp from 'sharp';
 import { Response as TResponse } from 'express';
 
 // @UseGuards(JwtAuthGuard)

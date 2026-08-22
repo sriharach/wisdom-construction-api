@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "functions": {
     "api/index.ts": {
-      "includeFiles": ["src/uploads-all/**"]
+      "includeFiles": "src/uploads-all/**"
     }
   }
 }
