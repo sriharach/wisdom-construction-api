@@ -8,7 +8,7 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { ValidationPipe } from '@nestjs/common';
 import * as path from 'path';
 
-async function bootstrap() {
+export async function createApp() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     cors: {
       origin: '*',
@@ -35,8 +35,16 @@ async function bootstrap() {
   app.useGlobalFilters(new GlobalExceptionFilter());
   app.useGlobalPipes(new ValidationPipe()); // ✅ ใช้ global validation pipe
   // serve-static
-  app.useStaticAssets(path.join(__dirname, '..', 'src', 'uploads-all'));
+  app.useStaticAssets(path.join(process.cwd(), 'src', 'uploads-all'));
   app.setGlobalPrefix('api');
+  return app;
+}
+
+async function bootstrap() {
+  const app = await createApp();
   await app.listen(process.env.PORT ?? 3000);
 }
-bootstrap();
+
+if (require.main === module) {
+  bootstrap();
+}
