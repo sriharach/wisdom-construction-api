@@ -15,7 +15,7 @@ export class ModelHouseImages1741173063284 implements MigrationInterface {
             name: 'id',
             type: 'uuid',
             isPrimary: true,
-            default: 'uuid()',
+            default: 'gen_random_uuid()',
           },
           {
             name: 'model_house_id',
@@ -38,7 +38,7 @@ export class ModelHouseImages1741173063284 implements MigrationInterface {
           },
           {
             name: 'created_date',
-            type: 'datetime',
+            type: 'timestamp',
             isNullable: true,
           },
           {
@@ -48,7 +48,7 @@ export class ModelHouseImages1741173063284 implements MigrationInterface {
           },
           {
             name: 'updated_date',
-            type: 'datetime',
+            type: 'timestamp',
             isNullable: true,
           },
         ],

@@ -4,12 +4,13 @@ import { DataSource } from 'typeorm';
 dotenv.config({ path: '.env.local' });
 
 export const connectionSource = new DataSource({
-  type: 'mysql',
-  host: process.env.HOST_DB,
-  port: Number(process.env.PORT_DB) || 3306,
-  username: process.env.USERNAME_DB,
-  password: process.env.PASSWORD_DB,
-  database: process.env.DATABASE_DB,
+  type: 'postgres',
+  host: process.env.POSTGRES_HOST,
+  port: Number(process.env.POSTGRES_PORT) || 5432,
+  username: process.env.POSTGRES_USER,
+  password: process.env.POSTGRES_PASSWORD,
+  database: process.env.POSTGRES_DATABASE,
+  ssl: { rejectUnauthorized: false },
   entities: ['src/**/*.entity.ts'],
   migrations: ['src/database/migrations/*.ts'],
   synchronize: false,

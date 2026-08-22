@@ -11,7 +11,7 @@ export class Realtys1741171403090 implements MigrationInterface {
                   name: 'id',
                   type: 'uuid',
                   isPrimary: true,
-                  default: 'uuid()',
+                  default: 'gen_random_uuid()',
                 },
                 {
                   name: 'name',
@@ -29,7 +29,7 @@ export class Realtys1741171403090 implements MigrationInterface {
                 },
                 {
                   name: 'created_date',
-                  type: 'datetime',
+                  type: 'timestamp',
                   isNullable: true,
                 },
                 {
@@ -39,7 +39,7 @@ export class Realtys1741171403090 implements MigrationInterface {
                 },
                 {
                   name: 'updated_date',
-                  type: 'datetime',
+                  type: 'timestamp',
                   isNullable: true,
                 },
               ],

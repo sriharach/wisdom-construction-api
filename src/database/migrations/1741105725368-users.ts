@@ -18,7 +18,7 @@ export class Users1741105725368 implements MigrationInterface {
             name: 'id',
             type: 'uuid',
             isPrimary: true,
-            default: 'uuid()',
+            default: 'gen_random_uuid()',
           },
           {
             name: 'role_id',
@@ -55,7 +55,7 @@ export class Users1741105725368 implements MigrationInterface {
           },
           {
             name: 'created_date',
-            type: 'datetime',
+            type: 'timestamp',
             isNullable: true,
           },
           {
@@ -65,7 +65,7 @@ export class Users1741105725368 implements MigrationInterface {
           },
           {
             name: 'updated_date',
-            type: 'datetime',
+            type: 'timestamp',
             isNullable: true,
           },
         ],
