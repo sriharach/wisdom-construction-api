@@ -11,8 +11,10 @@ import { RealtysModule } from './realtys/realtys.module';
 import { CategoriesHouseModule } from './categoriesHouse/categoriesHouse.module';
 import { ModelHouseModule } from './modelHouse/modelHouse.module';
 import { UploadModule } from './upload/upload.module';
+import { AppController } from './app.controller';
 
 @Module({
+  controllers: [AppController],
   providers: [{ provide: APP_FILTER, useClass: GlobalExceptionFilter }],
   imports: [
     ConfigModule.forRoot({

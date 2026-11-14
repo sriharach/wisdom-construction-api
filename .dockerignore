@@ -1,10 +1,5 @@
-.git
-.github
-node_modules
-dist
-coverage
-test
 .env
 .env.*
-uploads-all
-src/uploads-all
+node_modules
+.git
+EOF
