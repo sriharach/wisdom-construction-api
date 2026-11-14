@@ -11,8 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         return {
           host: config.get('HOST_DB'),
           password: config.get('PASSWORD_DB'),
-          port: 3306,
-          type: 'mysql',
+          port: Number(config.get('PORT_DB')) || 5432,
+          type: 'postgres',
           database: config.get('DATABASE_DB'),
           username: config.get('USERNAME_DB'),
           synchronize: false,
