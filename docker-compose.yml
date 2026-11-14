@@ -1,0 +1,15 @@
+services:
+  api:
+    image: ghcr.io/sriharach/wisdom-construction-api:latest
+    container_name: wisdom-construction-api
+    restart: unless-stopped
+    env_file:
+      - .env.local
+    environment:
+      NODE_ENV: production
+      PORT: "8000"
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./uploads-all:/app/src/uploads-all
+    mem_limit: 640m
